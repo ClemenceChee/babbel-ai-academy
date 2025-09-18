@@ -1,10 +1,10 @@
-# B____ AI Academy - Internal AI Education Platform
+# AI Academy - Internal AI Education Platform
 
-![B____ AI Academy Banner](https://i.imgur.com/your-banner-image.png)
+![AI Academy Banner](https://i.imgur.com/your-banner-image.png)
 
-**B____ AI Academy** is a comprehensive internal education platform designed to build AI literacy across all teams at B____. It provides a modern, engaging learning experience with specialized tracks for leadership, product, development, and compliance.
+**AI Academy** is a comprehensive internal education platform designed to build AI literacy across all teams in your organization. It provides a modern, engaging learning experience with specialized tracks for leadership, product, development, and compliance.
 
-This repository contains the complete source code and Docker deployment configuration for the B____ AI Academy platform, making it easy for anyone to run, develop, and deploy the application.
+This repository contains the complete source code and Docker deployment configuration for the AI Academy platform, making it easy for anyone to run, develop, and deploy the application.
 
 ---
 
@@ -16,11 +16,11 @@ This repository contains the complete source code and Docker deployment configur
 - **Analytics Dashboard**: Real-time insights into user engagement, course performance, and learning value.
 - **Dynamic Content Management**: Admin interface for real-time content updates without rebuilds.
 - **Dockerized Deployment**: Easy setup for local development and production environments.
-- **Professional Design**: B____ branding, responsive layout, and modern UI components.
+- **Professional Design**: Modern branding, responsive layout, and professional UI components.
 
 ## 🚀 Quick Start
 
-Get the B____ AI Academy platform up and running in minutes with Docker.
+Get the AI Academy platform up and running in minutes with Docker.
 
 ### Prerequisites
 
@@ -30,8 +30,8 @@ Get the B____ AI Academy platform up and running in minutes with Docker.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/babbel-ai-academy.git
-cd babbel-ai-academy
+git clone https://github.com/your-username/ai-academy.git
+cd ai-academy
 ```
 
 ### 2. Configure Environment
@@ -90,7 +90,7 @@ The `scripts/deploy.sh` script provides a convenient way to manage the applicati
 
 ## 🏗️ Architecture
 
-The B____ AI Academy platform is built with a modern full-stack architecture:
+The AI Academy platform is built with a modern full-stack architecture:
 
 - **Frontend**: React, Vite, Tailwind CSS, Recharts
 - **Backend**: Flask, Python, SQLAlchemy
@@ -117,9 +117,9 @@ The platform includes 6 comprehensive courses:
 
 ## 🎨 Design & Branding
 
-The platform features a professional design with B____ branding:
+The platform features a professional design with modern branding:
 
-- **Color Scheme**: B____ orange for the frontend, blue for the admin backend.
+- **Color Scheme**: Orange theme for the frontend, blue for the admin backend.
 - **Typography**: Inter font for a clean, modern look.
 - **UI Components**: Cards, charts, navigation, forms, and interactive elements.
 - **Responsive Design**: Optimized for all screen sizes.

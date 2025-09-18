@@ -19,8 +19,8 @@ services:
     depends_on:
       - backend-dev
     networks:
-      - babbel-dev-network
-    container_name: babbel-frontend-dev
+      - ai-academy-dev-network
+    container_name: ai-academy-frontend-dev
 
   # Backend Development Server
   backend-dev:
@@ -38,11 +38,11 @@ services:
       - ./backend:/app:ro
       - ./backend/src/content:/app/src/content
     networks:
-      - babbel-dev-network
-    container_name: babbel-backend-dev
+      - ai-academy-dev-network
+    container_name: ai-academy-backend-dev
     command: ["python", "app.py"]
 
 networks:
-  babbel-dev-network:
+  ai-academy-dev-network:
     driver: bridge
-    name: babbel-ai-academy-dev
+    name: ai-academy-dev

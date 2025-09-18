@@ -1,14 +1,14 @@
-# B____ AI Academy - Comprehensive Documentation
+# AI Academy - Comprehensive Documentation
 
-This document provides a detailed overview of the B____ AI Academy platform, including its architecture, features, deployment, and development guidelines.
+This document provides a detailed overview of the AI Academy platform, including its architecture, features, deployment, and development guidelines.
 
 ## 1. Introduction
 
-B____ AI Academy is an internal education platform designed to build AI literacy across all teams at B____. It provides a modern, engaging learning experience with specialized tracks for leadership, product, development, and compliance.
+AI Academy is an internal education platform designed to build AI literacy across all teams in your organization. It provides a modern, engaging learning experience with specialized tracks for leadership, product, development, and compliance.
 
 ### 1.1. Purpose
 
-- **Educate**: Provide comprehensive AI education to all B____ employees.
+- **Educate**: Provide comprehensive AI education to all organization employees.
 - **Empower**: Equip teams with the knowledge and skills to leverage AI effectively.
 - **Standardize**: Ensure a consistent understanding of AI principles and best practices.
 - **Innovate**: Foster a culture of AI-driven innovation.
@@ -21,11 +21,11 @@ B____ AI Academy is an internal education platform designed to build AI literacy
 - **Analytics Dashboard**: Real-time insights into user engagement, course performance, and learning value.
 - **Dynamic Content Management**: Admin interface for real-time content updates without rebuilds.
 - **Dockerized Deployment**: Easy setup for local development and production environments.
-- **Professional Design**: B____ branding, responsive layout, and modern UI components.
+- **Professional Design**: Modern branding, responsive layout, and professional UI components.
 
 ## 2. Architecture
 
-The B____ AI Academy platform is built with a modern full-stack architecture:
+The AI Academy platform is built with a modern full-stack architecture:
 
 - **Frontend**: React, Vite, Tailwind CSS, Recharts
 - **Backend**: Flask, Python, SQLAlchemy
@@ -60,8 +60,8 @@ The platform is designed for easy deployment with Docker.
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/babbel-ai-academy.git
-   cd babbel-ai-academy
+   git clone https://github.com/your-username/ai-academy.git
+   cd ai-academy
    ```
 
 2. **Configure Environment**

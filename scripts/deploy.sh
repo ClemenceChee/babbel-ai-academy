@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# B____ AI Academy Deployment Script
+# AI Academy Deployment Script
 # This script helps deploy the platform in different environments
 
 set -e
@@ -57,7 +57,7 @@ check_ports() {
 
 # Function to deploy development environment
 deploy_dev() {
-    print_status "Deploying B____ AI Academy in development mode..."
+    print_status "Deploying AI Academy in development mode..."
     
     # Build and start development containers
     docker-compose -f docker-compose.dev.yml down --remove-orphans
@@ -72,7 +72,7 @@ deploy_dev() {
 
 # Function to deploy production environment
 deploy_prod() {
-    print_status "Deploying B____ AI Academy in production mode..."
+    print_status "Deploying AI Academy in production mode..."
     
     # Build and start production containers
     docker-compose down --remove-orphans
@@ -87,7 +87,7 @@ deploy_prod() {
 
 # Function to deploy with nginx (full production)
 deploy_full() {
-    print_status "Deploying B____ AI Academy with Nginx reverse proxy..."
+    print_status "Deploying AI Academy with Nginx reverse proxy..."
     
     # Build and start all containers including nginx
     docker-compose --profile production down --remove-orphans
@@ -101,7 +101,7 @@ deploy_full() {
 
 # Function to stop all services
 stop_services() {
-    print_status "Stopping all B____ AI Academy services..."
+    print_status "Stopping all AI Academy services..."
     
     docker-compose -f docker-compose.dev.yml down --remove-orphans 2>/dev/null || true
     docker-compose down --remove-orphans 2>/dev/null || true
@@ -125,7 +125,7 @@ show_logs() {
 
 # Function to show status
 show_status() {
-    print_status "B____ AI Academy Service Status:"
+    print_status "AI Academy Service Status:"
     echo
     docker-compose ps
     echo
@@ -171,7 +171,7 @@ case "${1:-help}" in
         show_status
         ;;
     "help"|*)
-        echo "B____ AI Academy Deployment Script"
+        echo "AI Academy Deployment Script"
         echo
         echo "Usage: $0 [COMMAND]"
         echo

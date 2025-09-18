@@ -14,9 +14,9 @@ services:
     depends_on:
       - backend
     networks:
-      - babbel-network
+      - ai-academy-network
     restart: unless-stopped
-    container_name: babbel-frontend
+    container_name: ai-academy-frontend
 
   # Backend Flask API
   backend:
@@ -32,9 +32,9 @@ services:
     volumes:
       - ./backend/src/content:/app/src/content:ro
     networks:
-      - babbel-network
+      - ai-academy-network
     restart: unless-stopped
-    container_name: babbel-backend
+    container_name: ai-academy-backend
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
       interval: 30s
@@ -55,16 +55,16 @@ services:
       - frontend
       - backend
     networks:
-      - babbel-network
+      - ai-academy-network
     restart: unless-stopped
-    container_name: babbel-nginx
+    container_name: ai-academy-nginx
     profiles:
       - production
 
 networks:
-  babbel-network:
+  ai-academy-network:
     driver: bridge
-    name: babbel-ai-academy
+    name: ai-academy
 
 volumes:
   course_data:
