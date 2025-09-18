@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # Frontend React Application
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_URL=http://localhost:5000
+    depends_on:
+      - backend
+    networks:
+      - babbel-network
+    restart: unless-stopped
+    container_name: babbel-frontend
+
+  # Backend Flask API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_APP=app.py
+      - PYTHONPATH=/app
+    volumes:
+      - ./backend/src/content:/app/src/content:ro
+    networks:
+      - babbel-network
+    restart: unless-stopped
+    container_name: babbel-backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Nginx Reverse Proxy (Optional - for production)
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - babbel-network
+    restart: unless-stopped
+    container_name: babbel-nginx
+    profiles:
+      - production
+
+networks:
+  babbel-network:
+    driver: bridge
+    name: babbel-ai-academy
+
+volumes:
+  course_data:
+    driver: local
